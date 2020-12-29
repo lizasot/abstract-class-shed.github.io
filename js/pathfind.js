@@ -165,14 +165,13 @@ $(document).ready(function(){
 		$('#'+$(this).attr('id')[0]+"_id").val(val);
 	});
 	$('input[name="c1"]').on('change', function() {
-	    whereFrom = $(this).attr('id');
+		whereFrom = $(this).val();
+		console.log(whereFrom);
 		let val = (whereFrom=="dush") ? 699 : 100;
-		// $('#wh').val($(this).attr('id'));
-	    // $('#sh_loc').val("");
 		$('#sh_loc, #from_num, #to_num').attr({
-	       "max" : val,
-	       "placeholder" : val,
-	    }).val("");
+		       "max" : val,
+		       "placeholder" : val,
+	    	}).val("");
 	});
 	$('.clear').on('click', function() {
 		$("#"+$(this).attr('clear')+" input:checked").prop("checked", false);
