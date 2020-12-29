@@ -165,7 +165,7 @@ $(document).ready(function(){
 		$('#'+$(this).attr('id')[0]+"_id").val(val);
 	});
 	$('input[name="c1"]').on('change', function() {
-		whereFrom = $(this).val();
+		whereFrom = $(this).attr('id');
 		console.log(whereFrom);
 		let val = (whereFrom=="dush") ? 699 : 100;
 		$('#sh_loc, #from_num, #to_num').attr({
