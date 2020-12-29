@@ -2,7 +2,7 @@ var whereFrom = "dush";
 
 $(document).ready(function(){
     async function drawing(pathNum) {
-        let pathFetch = await fetch('path_'+whereFrom+'.json')
+        let pathFetch = await fetch('pathfind/path_'+whereFrom+'.json')
         , pathArr = await pathFetch.json()
         , respStr = ""
         , thisLoc = pathArr[pathNum] // Для быстроты сокращаем массив из 700 лок до 1 локи
@@ -29,9 +29,9 @@ $(document).ready(function(){
         $("#show_res").html(respStr);
     }
     async function pathing(fromStr, toStr, fromNum, toNum) {// FROM (str), TO (str), FROM (number), TO (number)
-        let pathFetch = await fetch('path_'+whereFrom+'.json')
+        let pathFetch = await fetch('pathfind/path_'+whereFrom+'.json')
         , pathArr = await pathFetch.json()
-        , concatFetch = await fetch('concat_'+whereFrom+'.json')
+        , concatFetch = await fetch('pathfind/concat_'+whereFrom+'.json')
         , concatArr = await concatFetch.json()
         , respStr = "<hr>"
         , paths = [];
@@ -153,19 +153,7 @@ $(document).ready(function(){
 		return false;
 	});
 	$('#sShow').click(function(){
-		//$("#sShow").attr("disabled", true);
-		//$("#show_wait").html("<img src=https://catwar.su/img/loading.gif>");
 		drawing($("#sh_loc").val())
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "locfind.php",
-// 			data: "sh_loc="+$("#sh_loc").val()+"&wh="+whereFrom,
-// 			success: function(html){
-// 				$("#show_res").html(html);
-// 				$("#sShow").attr("disabled", false);
-// 				$("#show_wait").html("");
-// 		   }
-// 		});
 		return false;
 	});
 	$('.search input').on('change', function() {
