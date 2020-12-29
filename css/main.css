@@ -2,6 +2,7 @@ body {
     color: #1a1a1d;
     background-color: #d2c1b5;
 }
+
 .bg-light {
     background-color: #614b3e!important;
 }
@@ -17,6 +18,7 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
     color: #ffffff;
 }
+
 .btn-primary {
     color: #fff;
     background-color: #d28e5f;
@@ -38,14 +40,12 @@ body {
   background-color: #d28e5f;
   border-color: #d28e5f;
 }
-
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #996744;
   border-color: #865a3b;
 }
-
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem #bf8b6880;
